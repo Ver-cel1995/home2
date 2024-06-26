@@ -1,0 +1,36 @@
+.App {
+    --header_height: 60px;
+}
+
+.hw {
+    margin-top: 34px;
+    position: relative;
+}
+
+.hw::before {
+    content: "";
+    width: 95%;
+    height: 1px;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: -20px;
+}
+
+.hw::after {
+    content: "";
+    width: 95%;
+    height: 1px;
+    background-color: #D9D9D9;
+    position: absolute;
+    bottom: -20px;
+}
+
+.hwTitle {
+    margin-bottom: 10px;
+}
+
+.hwMessage {
+    display: flex;
+    justify-content: space-around;
+    flex: 0 0 auto;
+}

@@ -1,0 +1,37 @@
+.sendForm {
+    display: flex;
+    margin-top: 73px;
+}
+
+.textarea {
+    border-radius: 20px;
+    width: 976px;
+    height: 40px;
+    box-shadow: 0 1px 2px 0 rgba(29, 33, 38, 0.1), 0 5px 20px 0 rgba(29, 33, 38, 0.03);
+    background: #f5f7fb;
+    border: 1px;
+    resize: none;
+    padding: 12px 0 11px 24px;
+}
+
+.textarea:focus-visible {
+    outline: #00cc22;
+}
+
+.button {
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    background: #06c;
+    padding: 10px 0;
+    color: white;
+    margin-left: 40px;
+    border: none;
+}
+
+.button:hover {
+
+}
+.button:active {
+
+}
