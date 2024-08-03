@@ -1,7 +1,9 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
+import {UserType} from "./HW3";
 
 type GreetingPropsType = {
+    users: UserType[]
     name: string // need to fix any
     setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void // need to fix any
     addUser: () => void // need to fix any
@@ -23,6 +25,7 @@ const Greeting: React.FC<GreetingPropsType> = (
         error,
         totalUsers,
         lastUserName,
+        users
     } // деструктуризация пропсов
 ) => {
     const inputClass = error ? s.errorInput : s.input // need to fix with (?:)
@@ -66,6 +69,13 @@ const Greeting: React.FC<GreetingPropsType> = (
                     Привет <span id={'hw3-last-user'}>{lastUserName}</span>!
                 </div>
             )}
+            {users.map( el => {
+                return (
+                    <ol>
+                        <li>{el.name}</li>
+                    </ol>
+                )
+            } )}
         </div>
     )
 }

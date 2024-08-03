@@ -1,7 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
-import {rename} from "node:fs";
 
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
@@ -67,10 +66,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length // need to fix
-    const lastUserName = name // need to fix
+    const lastUserName = users.length > 0 ? users[users.length - 1].name : ''// need to fix
 
     return (
         <Greeting
+            users={users}
             name={name}
             setNameCallback={setNameCallback}
             addUser={addUser}
