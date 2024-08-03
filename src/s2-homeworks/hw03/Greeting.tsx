@@ -69,13 +69,12 @@ const Greeting: React.FC<GreetingPropsType> = (
                     Привет <span id={'hw3-last-user'}>{lastUserName}</span>!
                 </div>
             )}
-            {users.map( el => {
-                return (
-                    <ol>
+            {users.map( el => (
+                    <ul>
                         <li>{el.name}</li>
-                    </ol>
+                    </ul>
                 )
-            } )}
+            )}
         </div>
     )
 }

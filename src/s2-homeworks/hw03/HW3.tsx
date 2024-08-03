@@ -19,11 +19,11 @@ import GreetingContainer from './GreetingContainer'
 
 // types
 export type UserType = {
-    _id: number // need to fix any
+    _id: string // need to fix any
     name: string // need to fix any
 }
 
-export const pureAddUserCallback = (name: string, setUsers: any, users: any) => { // need to fix any
+export const pureAddUserCallback = (name: string, setUsers: any, users: UserType[]) => { // need to fix any
     const user = {
         _id: v1(), name: name// need to fix
     }
